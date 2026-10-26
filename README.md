@@ -1,6 +1,6 @@
 qdj_blurkaze_fork for LAS
 
-References/Guides:
-https://www.tutorialspoint.com/pyqt/pyqt_qradiobutton_widget.html
-https://doc.qt.io/qt-6/qtwidgets-index.html
-https://www.pythonguis.com/tutorials/pyqt6-widgets/
+References/Guides: <br>
+https://www.tutorialspoint.com/pyqt/pyqt_qradiobutton_widget.html <br>
+https://doc.qt.io/qt-6/qtwidgets-index.html <br>
+https://www.pythonguis.com/tutorials/pyqt6-widgets/ <br>
