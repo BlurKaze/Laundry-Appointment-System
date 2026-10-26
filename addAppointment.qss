@@ -10,12 +10,51 @@ QLabel {
     font-size: 12px;
 }
 
-QLineEdit {
-background-color: white;
-border: 1.5px solid #dddddd;
-border-radius: 8px;
-padding: 5px;
+QLabel[tag="sectionLabel"]{
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    padding-top: 2px;
+    padding-left: 7px;
+}
 
+QLabel[tag="widgetLabel"]{
+    color: black;
+    font-size: 15px;
+    padding: 2px;
+}
+
+QLineEdit {
+    background-color: white;
+    border: 1.3px solid #a8a8a8;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+QRadioButton{
+    color: #181818;
+    font-size: 14px;
+    spacing: 8px;
+    margin-left: 10px;
+    background: transparent;
+}
+
+QRadioButton::indicator { 
+    width: 12px;
+    height: 12px;
+    border-radius: 6px; 
+    border: 1.3px solid #a8a8a8;
+    background-color: #ffffff;
+}
+
+QRadioButton::indicator:checked {
+    border-radius: 6px; 
+    border: 1.4px solid #76b7f8;
+    background-color: #deedfb; 
+}
+
+QRadioButton::indicator:unchecked { 
+    background-color:transparent; 
 }
 
 #header_layout {
@@ -50,37 +89,15 @@ padding: 5px;
 
 #progress_layout{
     background-color: #FFFFFF;
-    min-height: 25px;
-    max-height: 25px;
 }
 
-#personal_details_label {
-    color: black;
-    font-size: 18px;
-    font-weight: bold;
-    padding: 7px;
+#services_layout{
+    background-color: #FFFFFF;
 }
 
-#first_name_label {
-    color: black;
-    font-size: 12px;
-    padding: 2px;
+#specification_layout{
+    background-color: #FFFFFF;
 }
 
-#last_name_label {
-    color: black;
-    font-size: 12px;
-    padding: 2px;
-}
 
-#phone_no_label{
-    color: black;
-    font-size: 12px;
-    padding: 2px;
-}
 
-#email_address_label {
-    color: black;
-    font-size: 12px;
-    padding: 2px;
-}
