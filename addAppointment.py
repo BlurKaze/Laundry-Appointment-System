@@ -8,7 +8,6 @@ from PyQt6.QtGui import QIcon
 from pathlib import Path
 from Washer_button import CustomerCard
 
-
 class addAppointment(QMainWindow):
     def __init__(self):
         super().__init__()
@@ -215,7 +214,33 @@ class addAppointment(QMainWindow):
 
 #======= specification ======== end
 
-        #schedule_layout = QGridLayout()
+#======= schedule ======== start
+
+        schedule_layout = QGridLayout()
+        schedule_layout.setContentsMargins(0,6,0,6)
+        schedule_layout.setHorizontalSpacing(15)
+        schedule_layout.setAlignment(Qt.AlignmentFlag.AlignLeft)
+
+        schedule_container = QWidget()
+        schedule_container.setLayout(schedule_layout)
+
+        self.schedule_label = QLabel("Schedule Pick-Up/Delivery")
+        self.priority_btn = QPushButton("Priority\n15~60mins")
+        self.priority_btn.setContentsMargins(10,0,0,0)
+
+        self.priority_btn = QPushButton("Priority\n15~60 mins")
+        self.priority_btn.setContentsMargins(10,0,0,0)
+        self.same_day_btn = QPushButton("Same-Day\n~24 hours")
+        self.same_day_btn.setContentsMargins(10,0,0,0)
+        self.standard_btn = QPushButton("Standard\n24~ hours")
+        self.standard_btn.setContentsMargins(10,0,0,0)
+
+        schedule_layout.addWidget(self.schedule_label, 0,0,1,2, alignment=Qt.AlignmentFlag.AlignLeft)
+        schedule_layout.addWidget(self.priority_btn, 1,0, alignment=Qt.AlignmentFlag.AlignLeft)
+        schedule_layout.addWidget(self.same_day_btn, 1,1, alignment=Qt.AlignmentFlag.AlignLeft)
+        schedule_layout.addWidget(self.standard_btn, 1,2, alignment=Qt.AlignmentFlag.AlignLeft)
+
+#======= schedule ======== end
 
         main_layout.addWidget(header_container, stretch=0)
         main_layout.addWidget(progress_container, stretch=0)
@@ -224,7 +249,8 @@ class addAppointment(QMainWindow):
         inputDetails_layout.addWidget(personalDetails_container, stretch=0)
         inputDetails_layout.addWidget(services_container, stretch=0)
         inputDetails_layout.addWidget(specification_container, stretch=0)
-        #inputDetails_layout.addWidget(schedule_layout)
+        inputDetails_layout.addWidget(schedule_container, stretch=0)
+
 
 #======= input details ======== end
 
@@ -256,6 +282,12 @@ class addAppointment(QMainWindow):
         self.garment_count_label.setProperty("tag", "widgetLabel")
         self.addons_label.setProperty("tag","widgetLabel")
         self.laundry_note_label.setProperty("tag","widgetLabel")
+
+        schedule_container.setObjectName("schedule_layout")
+        self.schedule_label.setProperty("tag", "sectionLabel")
+        self.priority_btn.setProperty("tag", "schedule_button")
+        self.same_day_btn.setProperty("tag", "schedule_button")
+        self.standard_btn.setProperty("tag", "schedule_button")
 
 #======= object names ======== end
 
