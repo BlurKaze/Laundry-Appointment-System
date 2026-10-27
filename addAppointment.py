@@ -7,7 +7,7 @@ from PyQt6.QtWidgets import (QApplication, QWidget, QLabel, QMainWindow,
 from PyQt6.QtGui import QIcon
 from pathlib import Path
 from Washer_button import CustomerCard
-from ProgressBar import ProgressBar
+from Progress_bar import Progress_bar
 
 class addAppointment(QMainWindow):
     def __init__(self):
@@ -54,7 +54,7 @@ class addAppointment(QMainWindow):
         progress_container = QWidget()
         progress_container.setLayout(progress_layout)
 
-        self.progress_bar = ProgressBar()
+        self.progress_bar = Progress_bar()
         progress_layout.addWidget(self.progress_bar)
 #======= progress ======== end
 
