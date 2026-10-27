@@ -7,12 +7,13 @@ from PyQt6.QtWidgets import (QApplication, QWidget, QLabel, QMainWindow,
 from PyQt6.QtGui import QIcon
 from pathlib import Path
 from Washer_button import CustomerCard
+from ProgressBar import ProgressBar
 
 class addAppointment(QMainWindow):
     def __init__(self):
         super().__init__()
         self.setWindowTitle("Laundry Dashboard System")
-        self.setFixedSize(800, 600)
+        self.setFixedSize(800, 625)
 
         main_layout = QVBoxLayout()
         main_layout.setContentsMargins(0,0,0,0)
@@ -50,14 +51,10 @@ class addAppointment(QMainWindow):
 
 #======= progress ======== start
         progress_layout = QHBoxLayout()
-        progress_layout.setContentsMargins(0,0,0,0)
-        progress_layout.setSpacing(0)
-
         progress_container = QWidget()
         progress_container.setLayout(progress_layout)
 
-        self.progress_bar = QProgressBar()
-        self.progress_bar.setValue(0)
+        self.progress_bar = ProgressBar()
         progress_layout.addWidget(self.progress_bar)
 #======= progress ======== end
 
@@ -85,31 +82,35 @@ class addAppointment(QMainWindow):
         self.first_name_label.setContentsMargins(10,0,0,0)
         self.first_name = QLineEdit()
         self.first_name.setFixedWidth(250)
+        self.first_name.setFixedHeight(28)
         self.first_name.setContentsMargins(10,0,0,0)
 
         self.last_name_label = QLabel("Last Name")
         self.last_name_label.setContentsMargins(10,0,0,0)
         self.last_name = QLineEdit()
         self.last_name.setFixedWidth(250)
+        self.last_name.setFixedHeight(28)
         self.last_name.setContentsMargins(10,0,0,0)
 
         self.phone_no_label = QLabel("Phone No.")
         self.phone_no_label.setContentsMargins(10,0,0,0)
         self.phone_no = QLineEdit()
         self.phone_no.setFixedWidth(250)
+        self.phone_no.setFixedHeight(28)
         self.phone_no.setContentsMargins(10,0,0,0)
 
         self.email_address_label = QLabel("Email Address")
         self.email_address_label.setContentsMargins(10,0,0,0)
-
         self.email_address = QLineEdit()
         self.email_address.setFixedWidth(250)
+        self.email_address.setFixedHeight(28)
         self.email_address.setContentsMargins(10,0,0,0)
 
         self.home_address_label = QLabel("Home Address")
         self.home_address_label.setContentsMargins(10,0,0,0)
         self.home_address = QLineEdit()
         self.home_address.setFixedWidth(250)
+        self.home_address.setFixedHeight(28)
         self.home_address.setContentsMargins(10,0,0,0)
 
         personalDetails_layout.addWidget(self.personalDetails_label, 0, 0, alignment=Qt.AlignmentFlag.AlignLeft)
