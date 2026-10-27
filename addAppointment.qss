@@ -33,7 +33,7 @@ QLineEdit {
 
 QPushButton[tag="schedule_button"]{
     border: 1.5px solid #a8a8a8;
-    border-radius: 25px;
+    border-radius: 23px;
     padding-left: 40px;
     padding-right: 40px;
     padding-top: 4px;
@@ -42,27 +42,15 @@ QPushButton[tag="schedule_button"]{
     margin-top: 5px;
     
     color: #a8a8a8;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: bold;
     text-align: center;
     background-color: #FFFFFF;
 }
 
 QPushButton[tag="schedule_button"]:hover{
-    border: 1.5px solid #22588d;
-    border-radius: 25px;
-    padding-left: 40px;
-    padding-right: 40px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    margin-left: 10px;
-    margin-top: 5px;
-    
     color: #22588d;
-    font-size: 15px;
-    font-weight: bold;
-    text-align: center;
-    background-color: #FFFFFF;
+    border: 1.5px solid #22588d;
 }
 
 QRadioButton{
