@@ -1,4 +1,5 @@
-from PyQt6.QtWidgets import (QApplication, QWidget)
+import sys
+from PyQt6.QtWidgets import QApplication, QWidget
 from PyQt6.QtGui import QPainter, QPen, QBrush, QFont, QColor
 from PyQt6.QtCore import Qt, QRect
 
@@ -6,8 +7,7 @@ class Progress_bar(QWidget):
     def __init__(self):
         super().__init__()
 
-        self.setFixedHeight(80) 
-        self.setMinimumWidth(800)
+        self.setFixedSize(800,80) 
 
         self.step_count = 0
         self.circle_color1 = QColor("#6491bf")
@@ -87,7 +87,6 @@ class Progress_bar(QWidget):
         painter.end()
 
 if __name__ == '__main__':
-    import sys
     app = QApplication(sys.argv)
     window = Progress_bar()
     window.show()
