@@ -31,6 +31,14 @@ QLineEdit {
     padding: 5px;
 }
 
+QLineEdit::hover{
+    border-color: #22588d;
+}
+
+QLineEdit::focus{
+    border: 1.5px solid #084a8b;;
+}
+
 QPushButton[tag="schedule_button"]{
     border: 1.5px solid #a8a8a8;
     border-radius: 23px;
@@ -103,6 +111,15 @@ QRadioButton::indicator:unchecked {
     padding: 5px;
     border-radius: 11px;
     
+}
+
+#confirm_btn::hover {
+    background-color: #47739e;
+}
+
+#confirm_btn:pressed {
+    background-color: #085eb4;
+
 }
 
 #inputDetails_layout {
