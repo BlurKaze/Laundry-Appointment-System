@@ -42,6 +42,7 @@ class addAppointment(QMainWindow):
         self.confirm_btn = QPushButton("Confirm")
         self.confirm_btn.setCursor(Qt.CursorShape.PointingHandCursor)
         self.confirm_btn.setFixedSize(200, 40)
+        self.confirm_btn.clicked.connect(self.next_step)
 
         header_layout.addWidget(self.back_btn, stretch=0)
         header_layout.addWidget(self.header_text, stretch=2)
@@ -291,6 +292,12 @@ class addAppointment(QMainWindow):
         self.standard_btn.setProperty("tag", "schedule_button")
 
 #======= object names ======== end
+
+#======= signals and event calls ======== start
+
+    def next_step(self):
+        self.progress_bar.confirm_step()
+
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
