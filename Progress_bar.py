@@ -9,15 +9,33 @@ class Progress_bar(QWidget):
         self.setFixedHeight(80) 
         self.setMinimumWidth(800)
 
+        self.step_count = 0
+        self.circle_color1 = QColor("#6491bf")
+        self.circle_color2 = QColor("#a8a8a8")
+        self.circle_color3 = QColor("#a8a8a8")
+        
+    def confirm_step(self):
+        self.step_count +=1
+
+        if self.step_count == 1:
+            self.circle_color2 = QColor("#6491bf")
+            self.update()
+        elif self.step_count == 2:
+            self.circle_color3 = QColor("#6491bf")
+            self.update()
+        else:
+            pass
+        
+    
     def paintEvent(self, event):
         painter = QPainter(self)
         painter.setRenderHint(QPainter.RenderHint.Antialiasing, True)
 
         font = QFont("Arial", 16, 700)
         font2 = QFont("Arial", 11)
-        painter.setPen(QPen(QColor("#6491bf"), 2, Qt.PenStyle.SolidLine))
+        painter.setPen(QPen(self.circle_color1, 2, Qt.PenStyle.SolidLine))
         #painter.setBrush(QBrush(QColor("#6491bf"), Qt.BrushStyle.SolidPattern))
-        painter.setBrush(QBrush(QColor("#6491bf"), Qt.BrushStyle.SolidPattern))
+        painter.setBrush(QBrush(self.circle_color1, Qt.BrushStyle.SolidPattern))
 
         rect = QRect(120,5,50,50)
         painter.drawEllipse(rect)
@@ -30,12 +48,12 @@ class Progress_bar(QWidget):
         painter.setFont(font2)
         painter.drawText(text, Qt.AlignmentFlag.AlignCenter, "Booking Details")
 
-        painter.setPen(QPen(QColor("#6491bf"), 2, Qt.PenStyle.SolidLine))
+        painter.setPen(QPen(self.circle_color2, 2, Qt.PenStyle.SolidLine))
         painter.drawLine(180, 30, 350, 30)
 
-        painter.setPen(QPen(QColor("#6491bf"), 2, Qt.PenStyle.SolidLine))
-        #painter.setBrush(QBrush(QColor("#6491bf"), Qt.BrushStyle.SolidPattern))
-        painter.setBrush(QBrush(QColor("#6491bf"), Qt.BrushStyle.SolidPattern))
+        painter.setPen(QPen(self.circle_color2, 2, Qt.PenStyle.SolidLine))
+        #painter.setBrush(QBrush(QColor("#a8a8a8"), Qt.BrushStyle.SolidPattern))
+        painter.setBrush(QBrush(self.circle_color2, Qt.BrushStyle.SolidPattern))
         
         rect = QRect(360,5,50,50)
         painter.drawEllipse(rect)
@@ -48,12 +66,12 @@ class Progress_bar(QWidget):
         painter.setFont(font2)
         painter.drawText(text, Qt.AlignmentFlag.AlignCenter, "Confirmation")
 
-        painter.setPen(QPen(QColor("#6491bf"), 2, Qt.PenStyle.SolidLine))
+        painter.setPen(QPen(self.circle_color3, 2, Qt.PenStyle.SolidLine))
         painter.drawLine(420, 30, 590, 30)
 
-        painter.setPen(QPen(QColor("#6491bf"), 2, Qt.PenStyle.SolidLine))
-        #painter.setBrush(QBrush(QColor("#6491bf"), Qt.BrushStyle.SolidPattern))
-        painter.setBrush(QBrush(QColor("#6491bf"), Qt.BrushStyle.SolidPattern))
+        painter.setPen(QPen(self.circle_color3, 2, Qt.PenStyle.SolidLine))
+        #painter.setBrush(QBrush(QColor("#a8a8a8"), Qt.BrushStyle.SolidPattern))
+        painter.setBrush(QBrush(self.circle_color3, Qt.BrushStyle.SolidPattern))
 
         rect = QRect(600,5,50,50)
         painter.drawEllipse(rect)
@@ -67,7 +85,6 @@ class Progress_bar(QWidget):
         painter.drawText(text, Qt.AlignmentFlag.AlignCenter, "Success")
 
         painter.end()
-
 
 if __name__ == '__main__':
     import sys
