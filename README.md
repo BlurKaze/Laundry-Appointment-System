@@ -11,3 +11,4 @@ https://doc.qt.io/qtforpython-6/PySide6/QtWidgets/QGridLayout.html#PySide6.QtWid
 https://doc.qt.io/qt-6/qpainter.html#RenderHint-enum
 https://doc.qt.io/qt-6/qpainter.html
 https://doc.qt.io/qt-6/qpushbutton.html
+https://forum.qt.io/topic/2769/displaying-html-codes-in-qlabel
