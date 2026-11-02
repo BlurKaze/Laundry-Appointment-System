@@ -12,3 +12,5 @@ https://doc.qt.io/qt-6/qpainter.html#RenderHint-enum
 https://doc.qt.io/qt-6/qpainter.html
 https://doc.qt.io/qt-6/qpushbutton.html
 https://forum.qt.io/topic/2769/displaying-html-codes-in-qlabel
+https://forum.qt.io/topic/141229/can-html-tags-be-used-in-qpushbutton-settext/6
+https://www.pythontutorial.net/pyqt/pyqt-qmessagebox/
